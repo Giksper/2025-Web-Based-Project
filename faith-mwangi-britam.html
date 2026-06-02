@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faith Mwangi - Britam Insurance Advisor | Protecting What Matters Most</title>
+<meta name="description" content="Faith Mwangi, licensed Britam Insurance Advisor in Kenya. Life, Medical, Motor and Education insurance. Contact on WhatsApp today." />
+<style>
+  :root{
+    --britam-blue:#003594;
+    --britam-blue-dark:#002569;
+    --britam-blue-light:#1e62d0;
+    --accent:#ffb81c;
+    --whatsapp:#25D366;
+    --bg:#ffffff;
+    --soft:#f4f7fc;
+    --text:#1a1a1a;
+    --muted:#5b6b80;
+    --border:#e4eaf2;
+    --shadow:0 6px 24px rgba(0,53,148,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:var(--britam-blue);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* NAV */
+  nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:50}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;max-width:1100px;margin:0 auto}
+  .logo{font-weight:800;color:var(--britam-blue);font-size:1.1rem}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{color:var(--text);font-weight:500;font-size:.95rem}
+  .nav-links a:hover{color:var(--britam-blue)}
+  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;color:var(--britam-blue);cursor:pointer}
+
+  /* HEADER / HERO */
+  header.hero{background:linear-gradient(135deg,var(--britam-blue) 0%,var(--britam-blue-dark) 100%);color:#fff;padding:70px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:1fr 280px;gap:50px;align-items:center}
+  .hero h1{font-size:2.6rem;line-height:1.15;margin-bottom:10px;font-weight:800}
+  .hero .role{color:var(--accent);font-weight:600;letter-spacing:.5px;text-transform:uppercase;font-size:.9rem;margin-bottom:14px;display:block}
+  .hero .tagline{font-size:1.2rem;opacity:.92;margin-bottom:28px}
+  .photo{width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.1);border:4px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:.9rem;text-align:center;padding:10px;margin:0 auto;overflow:hidden}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:8px;font-weight:600;font-size:1rem;border:0;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.15)}
+  .btn-wa{background:var(--whatsapp);color:#fff}
+  .btn-primary{background:var(--accent);color:#1a1a1a}
+  .btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  /* SECTIONS */
+  section{padding:70px 0}
+  section.alt{background:var(--soft)}
+  .section-title{text-align:center;margin-bottom:14px;font-size:2rem;color:var(--britam-blue);font-weight:800}
+  .section-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 45px}
+
+  /* ABOUT */
+  .about-text{max-width:780px;margin:0 auto;text-align:center;font-size:1.05rem;color:#333}
+  .badges{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+  .badge{background:#fff;border:1px solid var(--border);border-radius:50px;padding:10px 18px;font-size:.9rem;font-weight:600;color:var(--britam-blue);box-shadow:var(--shadow)}
+
+  /* SERVICES */
+  .services{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px 22px;text-align:center;transition:.2s;box-shadow:var(--shadow)}
+  .card:hover{transform:translateY(-4px);border-color:var(--britam-blue-light)}
+  .card .icon{width:62px;height:62px;border-radius:50%;background:#e8f0ff;color:var(--britam-blue);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem}
+  .card h3{color:var(--britam-blue);margin-bottom:8px;font-size:1.15rem}
+  .card p{color:var(--muted);font-size:.93rem}
+
+  /* WHY */
+  .why-list{max-width:760px;margin:0 auto;display:grid;gap:18px}
+  .why-item{display:flex;gap:16px;align-items:flex-start;background:#fff;padding:20px;border-radius:12px;border:1px solid var(--border)}
+  .why-check{flex:0 0 36px;height:36px;border-radius:50%;background:var(--britam-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .why-item h4{color:var(--britam-blue);margin-bottom:4px}
+  .why-item p{color:var(--muted);font-size:.95rem}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .contact-info .info-item{display:flex;gap:14px;align-items:center;margin-bottom:18px;padding:16px;background:#fff;border-radius:10px;border:1px solid var(--border)}
+  .info-icon{width:44px;height:44px;border-radius:50%;background:var(--britam-blue);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 44px;font-size:1.1rem}
+  .info-item strong{display:block;color:var(--britam-blue);font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
+  .info-item span{color:#333;font-size:1rem}
+  form{background:#fff;padding:28px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+  form label{display:block;font-weight:600;margin-bottom:6px;font-size:.9rem;color:#333}
+  form input, form textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:8px;font-size:1rem;font-family:inherit;margin-bottom:16px;transition:.15s}
+  form input:focus, form textarea:focus{outline:none;border-color:var(--britam-blue);box-shadow:0 0 0 3px rgba(0,53,148,.12)}
+  form textarea{resize:vertical;min-height:110px}
+  form button{width:100%;background:var(--britam-blue);color:#fff;padding:14px;border:0;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;transition:.2s}
+  form button:hover{background:var(--britam-blue-dark)}
+
+  /* FOOTER */
+  footer{background:var(--britam-blue-dark);color:#fff;padding:34px 0;text-align:center}
+  footer p{margin:4px 0;opacity:.9;font-size:.95rem}
+  footer .licensed{font-weight:600;color:var(--accent)}
+
+  /* FLOATING WHATSAPP */
+  .float-wa{position:fixed;bottom:24px;right:24px;background:var(--whatsapp);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 6px 20px rgba(37,211,102,.5);z-index:99;transition:.2s}
+  .float-wa:hover{transform:scale(1.08);color:#fff}
+
+  /* RESPONSIVE */
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;text-align:center}
+    .photo{order:-1}
+    .hero h1{font-size:2rem}
+    .hero-ctas{justify-content:center}
+    .services{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr}
+    .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:18px 20px;border-bottom:1px solid var(--border);gap:14px}
+    .nav-links.open{display:flex}
+    .menu-btn{display:block}
+    section{padding:55px 0}
+    .section-title{font-size:1.6rem}
+  }
+  @media (max-width:480px){
+    .services{grid-template-columns:1fr}
+    .hero{padding:50px 0 60px}
+    .photo{width:180px;height:180px}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Faith Mwangi <span>•</span> Britam</div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Me</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="role">Britam Insurance Advisor</span>
+      <h1>Faith Mwangi</h1>
+      <p class="tagline">Protecting What Matters Most</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/254700000000?text=Hello%20Faith%2C%20I'd%20like%20to%20learn%20more%20about%20Britam%20insurance" class="btn btn-wa" target="_blank" rel="noopener">
+          💬 Contact Me on WhatsApp
+        </a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
+    <div class="photo" id="photo">
+      <span>Agent Photo<br/>(Replace this placeholder)</span>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-sub">Your trusted insurance partner in Kenya</p>
+    <p class="about-text">
+      I am a licensed Britam Insurance Advisor committed to helping families and businesses across Kenya protect what matters most.
+      With years of experience and personalized service, I make insurance simple, affordable, and reliable.
+      Whether you need cover for your family, health, car, or your child's future — I'm here to guide you every step of the way.
+    </p>
+    <div class="badges">
+      <div class="badge">✓ Licensed by IRA Kenya</div>
+      <div class="badge">✓ Certified Britam Agent</div>
+      <div class="badge">✓ 5+ Years Experience</div>
+      <div class="badge">✓ 100% Client Focused</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="container">
+    <h2 class="section-title">Insurance Products</h2>
+    <p class="section-sub">Comprehensive cover options tailored for you and your family</p>
+    <div class="services">
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h3>Life Insurance</h3>
+        <p>Secure your family's future with flexible life cover plans that give them peace of mind.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏥</div>
+        <h3>Medical / Health</h3>
+        <p>Quality health cover for individuals and families with access to top hospitals in Kenya.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚗</div>
+        <h3>Motor / Car</h3>
+        <p>Comprehensive and third-party car insurance with fast claims and roadside support.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Education Policy</h3>
+        <p>Save and invest for your child's education and guarantee their tomorrow today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <h2 class="section-title">Why Choose Me</h2>
+    <p class="section-sub">More than insurance — a relationship you can trust</p>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Trusted Britam Partnership</h4><p>Backed by Britam, one of Kenya's most respected insurance providers with strong claim settlement.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Personalized Advice</h4><p>I take time to understand your needs and recommend cover that truly fits your life and budget.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Quick & Reliable Service</h4><p>Fast quotes, fast onboarding, and quick claim follow-ups — no long waiting times.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="why-check">✓</div>
+        <div><h4>Professional & Transparent</h4><p>No hidden charges. Clear information so you always know what you're paying for.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">Ready to get covered? Reach out today for a free consultation.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div><strong>Phone</strong><span>+254 700 000 000</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div><strong>Email</strong><span>faith.mwangi@example.com</span></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div><strong>Location</strong><span>Nairobi, Kenya</span></div>
+        </div>
+        <a href="https://wa.me/254700000000?text=Hello%20Faith%2C%20I'd%20like%20a%20quote" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:6px" target="_blank" rel="noopener">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+      <form onsubmit="handleSubmit(event)">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required placeholder="John Doe" />
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="07XX XXX XXX" />
+        <label for="message">Message</label>
+        <textarea id="message" required placeholder="Tell me what cover you're interested in..."></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p class="licensed">Licensed Britam Insurance Agent</p>
+    <p>&copy; <span id="year"></span> Faith Mwangi. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/254700000000" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById('menuBtn');
+  const links = document.getElementById('navLinks');
+  btn.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+  function handleSubmit(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+    const text = `Hello Faith, my name is ${name} (${phone}). ${message}`;
+    window.open(`https://wa.me/254700000000?text=${encodeURIComponent(text)}`,'_blank');
+  }
+</script>
+</body>
+</html>
